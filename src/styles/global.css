@@ -35,8 +35,8 @@ body.dark-theme a {
   }
 }
 body.light-theme {
-  --bg-color: #fff;
-  --text-color: #333;
+  --bg-color: #F4F5F7;
+  --text-color: #4d5156;
   --header-bg-color: #eee;
   transition-duration: 1.5s;
 }

@@ -104,7 +104,7 @@
 }
 @media (max-width: 640px) {
   .dataBox span .workTitle {
-    font-size: 12px;
+    font-size: 16px;
   }
   .dataBox span .date {
     font-size: 10px;

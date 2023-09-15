@@ -105,6 +105,7 @@
   .wrapper .profileContainer .profileText .profileBody {
     font-size: 12px;
     letter-spacing: 1.2px;
+    margin: 30px 0px 50px;
   }
 }
 @media (max-width: 640px) {

@@ -11,25 +11,16 @@ Header {
   .container {
     z-index: 1;
 
-    .menu {
-      position: fixed;
-      // bottom: 20%;
-      // margin-bottom: 20%;
-      list-style: none;
-
-      li {
-        margin-top: 20px;
-      }
-
-      a {
-        text-decoration: none;
-      }
-    }
-
     .nameBox {
       position: fixed;
       bottom: 20%;
       right: 10%;
+
+      @media (max-width: $sm) {
+        position: fixed;
+        top: 55%;
+        right: 10%;
+      }
 
       img {
         width: 300px;
@@ -61,7 +52,10 @@ Header {
   .credit {
     font-size: 10px;
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
     left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
   }
 }

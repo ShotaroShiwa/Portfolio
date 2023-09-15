@@ -12,7 +12,7 @@ export const designIcons = [
 
 export const developmentIcons = [
   {
-    name: 'html', value: 6, img: '/public/html_icon.png', text: '表示対象に沿った最適なタグ付け、汎用性のある記述、分かりやすい名前付けを心掛けている'
+    name: 'html', value: 7, img: '/public/html_icon.png', text: '表示対象に沿った最適なタグ付け、汎用性のある記述、分かりやすい名前付けを心掛けている'
   },
   {
     name: 'css', value: 5, img: '/public/css_icon.png', text: 'デザインカンプに基づいたCSSコーディング、scssの利用、\nレスポンシブデザイン、animationの使用が可能。'

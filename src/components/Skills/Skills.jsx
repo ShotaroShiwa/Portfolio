@@ -29,21 +29,21 @@ const Skills = () => {
   }
 
   const [activeSkill, setActiveSkill] = useState("");
-  const [activeIcon, setActiveIcon] = useState("");
+  const [activeImg, setActiveImg] = useState("");
   const [activeText, setActiveText] = useState("");
   const [skillValue, setSkillValue] = useState(0);
   const [activeCategory, setActiveCategory] = useState("");
 
-  const handleIconClick = (name, icon, category, text, value) => {
+  const handleIconClick = (name, img, category, text, value) => {
     if (activeText === text) {
       setActiveSkill("");
-      setActiveIcon("");
+      setActiveImg("");
       setActiveText("");
       setSkillValue(0);
       setActiveCategory("");
     } else {
       setActiveSkill(name);
-      setActiveIcon(icon);
+      setActiveImg(img);
       setActiveText(text);
       setSkillValue(value);
       setActiveCategory(category);
@@ -74,7 +74,7 @@ const Skills = () => {
         max: 10,
         ticks: {
           color: '#1a1a1a',
-          stepSize: 1
+          stepSize: 2
         },
         grid: {
           borderColor: '#1a1a1a',
@@ -95,7 +95,7 @@ const Skills = () => {
       {
         data: [skillValue],
         backgroundColor: getBarColor(activeCategory),
-        categoryPercentage: 0.5
+        categoryPercentage: 0.3
       }
     ],
   };
@@ -110,14 +110,16 @@ const Skills = () => {
       <div className={css.box}>
         <div className={css.extendBox}>
           <div className={css.graphBox}>
-            <div className={activeIcon ? css.activeIcon : ""}>
-              {activeIcon || <div className={css.defaultText}> </div>}
-            </div>
-            <div className={activeSkill ? css.activeSkill : ""}>
-              {activeSkill || <div className={css.defaultText}> </div>}
+            <div className={css.activeTitle}>
+              <div className={activeImg ? css.activeImg : ""}>
+                {activeImg ? <img src={activeImg} /> : ""}
+              </div>
+              <div className={activeSkill ? css.activeSkill : ""}>
+                {activeSkill}
+              </div>
             </div>
             <Bar options={options} data={data} />
-            <div className={activeText ? css.activeSkill : ""}>
+            <div className={activeText ? css.activeText : ""}>
               {activeText || <div className={css.defaultText}> スキルアイコンをクリックすると説明が表示されます</div>}
             </div>
           </div>
@@ -156,7 +158,7 @@ const Skills = () => {
           </div>
         </div>
       </div>
-    </motion.section>
+    </motion.section >
   )
 }
 

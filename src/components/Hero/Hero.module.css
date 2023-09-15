@@ -9,20 +9,17 @@ Header {
 .wrapper .container {
   z-index: 1;
 }
-.wrapper .container .menu {
-  position: fixed;
-  list-style: none;
-}
-.wrapper .container .menu li {
-  margin-top: 20px;
-}
-.wrapper .container .menu a {
-  text-decoration: none;
-}
 .wrapper .container .nameBox {
   position: fixed;
   bottom: 20%;
   right: 10%;
+}
+@media (max-width: 640px) {
+  .wrapper .container .nameBox {
+    position: fixed;
+    top: 55%;
+    right: 10%;
+  }
 }
 .wrapper .container .nameBox img {
   width: 300px;
@@ -50,6 +47,9 @@ Header {
 .wrapper .credit {
   font-size: 10px;
   position: absolute;
-  bottom: 20px;
+  bottom: 30px;
   left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }/*# sourceMappingURL=Hero.module.css.map */

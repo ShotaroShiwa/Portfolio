@@ -1,53 +1,15 @@
 .wrapper {
   position: relative;
 }
-
-.box {
+.wrapper .box {
   display: flex;
   margin: 0 auto;
+  height: 65vh;
   justify-content: space-between;
 }
-.box .oneContainer {
-  margin: 0 auto;
-}
-@media (max-width: 640px) {
-  .box .oneContainer {
-    margin: 0 auto 50px;
-  }
-}
-.box .oneContainer p {
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-.box .oneContainer .designContainer {
-  display: grid;
-  grid-template-columns: repeat(3, 140px);
-  gap: 30px;
-}
-@media (max-width: 640px) {
-  .box .oneContainer .designContainer {
-    grid-template-columns: repeat(3, 80px);
-  }
-}
-.box .oneContainer .designContainer .skillIcon {
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-.box .oneContainer .designContainer .skillIcon:hover {
-  transform: scale(1.05);
-}
-.box .oneContainer .designContainer .skillIcon img {
-  width: 80%;
-  filter: brightness(1.2);
-}
-.box .oneContainer .designContainer div {
-  display: block;
-}
-
-.extendBox {
+.wrapper .box .extendBox {
   flex-basis: 30%;
-  margin-top: 50px;
+  margin-right: 100px;
   padding: 20px 50px;
   width: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -55,42 +17,84 @@
   background-color: rgba(229, 237, 241, 0.5);
 }
 @media (max-width: 640px) {
-  .extendBox {
+  .wrapper .box .extendBox {
     display: none;
   }
 }
-.extendBox .graphBox {
-  margin: 20px auto;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
-  padding: 10px;
+.wrapper .box .extendBox .graphBox .activeTitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
 }
-.extendBox .graphBox canvas {
-  height: 80px !important;
+.wrapper .box .extendBox .graphBox .activeTitle img {
+  width: 50%;
+}
+.wrapper .box .extendBox .graphBox .activeTitle .activeSkill {
+  font-size: 20px;
+}
+.wrapper .box .extendBox .graphBox canvas {
+  height: 30px !important;
 }
 @media (max-width: 640px) {
-  .extendBox .graphBox canvas {
+  .wrapper .box .extendBox .graphBox canvas {
     height: 50px !important;
   }
 }
-.extendBox .defaultText {
+.wrapper .box .extendBox .defaultText {
   font-size: 14px;
+  margin-top: 40px;
 }
 @media (max-width: 640px) {
-  .extendBox .defaultText {
+  .wrapper .box .extendBox .defaultText {
     font-size: 10px;
   }
 }
-.extendBox .activeSkill {
+.wrapper .box .extendBox .activeText {
   white-space: pre-wrap;
+  margin-top: 40px;
 }
 @media (max-width: 640px) {
-  .extendBox .activeSkill {
+  .wrapper .box .extendBox .activeText {
     font-size: 12px;
   }
 }
-
-.skillBox {
+.wrapper .skillBox {
   flex-basis: 70%;
+}
+.wrapper .skillBox .oneContainer:nth-child(2) {
+  margin-top: 50px;
+}
+@media (max-width: 640px) {
+  .wrapper .skillBox .oneContainer {
+    margin: 0 auto 50px;
+  }
+}
+.wrapper .skillBox .oneContainer p {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.wrapper .skillBox .oneContainer .designContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 140px);
+  gap: 30px;
+}
+@media (max-width: 640px) {
+  .wrapper .skillBox .oneContainer .designContainer {
+    grid-template-columns: repeat(3, 80px);
+  }
+}
+.wrapper .skillBox .oneContainer .designContainer .skillIcon {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.wrapper .skillBox .oneContainer .designContainer .skillIcon:hover {
+  transform: scale(1.05);
+}
+.wrapper .skillBox .oneContainer .designContainer .skillIcon img {
+  width: 80%;
+  filter: brightness(1.2);
+}
+.wrapper .skillBox .oneContainer .designContainer div {
+  display: block;
 }/*# sourceMappingURL=Skills.module.css.map */

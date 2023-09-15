@@ -11,12 +11,23 @@
   left: 0;
   z-index: 90;
 }
+@media (max-width: 640px) {
+  .logoHeader {
+    height: 70px;
+  }
+}
 .logoHeader img {
   display: block;
   padding-top: 30px;
   margin: 0 auto;
   z-index: 100;
   box-sizing: border-box;
+}
+@media (max-width: 640px) {
+  .logoHeader img {
+    padding-top: 20px;
+    width: 50%;
+  }
 }
 
 .mv {
@@ -30,6 +41,11 @@
   font-weight: 400;
   letter-spacing: 2px;
 }
+@media (max-width: 640px) {
+  .introBox {
+    margin-bottom: 40px;
+  }
+}
 .introBox .titleArea {
   display: flex;
   align-items: baseline;
@@ -40,11 +56,48 @@
   font-weight: 700;
   letter-spacing: 4px;
 }
+@media (max-width: 640px) {
+  .introBox .titleArea .title {
+    font-size: 22px;
+    letter-spacing: 2.2px;
+  }
+}
 .introBox .titleArea .date {
   margin-left: 30px;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 2px;
+}
+@media (max-width: 640px) {
+  .introBox .titleArea .date {
+    margin-left: 10px;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+  }
+}
+.introBox .requester {
+  margin-bottom: 30px;
+}
+@media (max-width: 640px) {
+  .introBox .requester {
+    margin-bottom: 20px;
+    font-size: 14px;
+    letter-spacing: 1.2px;
+  }
+}
+@media (max-width: 640px) {
+  .introBox .part {
+    margin-bottom: 10px;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+  }
+}
+@media (max-width: 640px) {
+  .introBox .usedSkill {
+    margin-bottom: 40px;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+  }
 }
 
 .overview {
@@ -52,8 +105,22 @@
   padding: 0px 7px;
   border-bottom: 2px solid #000;
 }
+@media (max-width: 640px) {
+  .overview {
+    font-size: 14px;
+    letter-spacing: 1.4px;
+  }
+}
 
 .summary {
   margin: 30px 0px 70px;
+  line-height: 35px;
   white-space: pre-wrap;
+}
+@media (max-width: 640px) {
+  .summary {
+    font-size: 12px;
+    line-height: 23px;
+    letter-spacing: 0.6px;
+  }
 }/*# sourceMappingURL=SingleWork.module.css.map */
