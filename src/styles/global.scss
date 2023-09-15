@@ -1,0 +1,217 @@
+@import './contants.scss';
+
+:root {
+  --bg-color: #F4F5F7;
+  --text-color: #333;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Noto Sans JP;
+  font-style: normal;
+  line-height: normal;
+
+  a {
+    color: var(--text-color);
+    transition-duration: 2.5s;
+  }
+}
+
+body.dark-theme {
+  --bg-color: #333;
+  --text-color: #ddd;
+  --header-bg-color: #222;
+  transition-duration: 1.5s;
+
+  a {
+    color: #ddd;
+    transition-duration: 2.5s;
+  }
+}
+
+@media(prefers-color-scheme) {
+  :root {
+    --bg-color: #333;
+    --text-color: #fff;
+    --header-bg-color: #222;
+    transition-duration: 1.5s;
+  }
+}
+
+body.light-theme {
+  --bg-color: #fff;
+  --text-color: #333;
+  --header-bg-color: #eee;
+  transition-duration: 1.5s;
+}
+
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.toggle-switch-button {
+  position: absolute;
+  z-index: 3;
+  right: 1px;
+}
+
+.bg-primary {
+  background: #F8F7F1;
+}
+
+.innerWidth {
+  @media (min-width: $xxl) {
+    max-width: 1680px;
+    margin: auto;
+  }
+
+  width: 100%;
+}
+
+.paddings {
+  padding: 90px 150px;
+
+  @media (max-width: $sm) {
+    padding: 30px 24px;
+  }
+}
+
+.HeaderPaddings {
+  padding: 90px 150px 0px;
+
+  @media (max-width: $sm) {
+    padding: 30px 24px 0px;
+  }
+}
+
+.aboutPaddings {
+  padding: 0px 150px 26px;
+
+  @media (max-width: $sm) {
+    padding: 0px 24px 10px;
+  }
+}
+
+.footerPaddings {
+  padding: 0px 150px 30px;
+
+  @media (max-width: $sm) {
+    padding: 0px 24px 20px;
+  }
+}
+
+.darkModeBtnPaddings {
+  padding-top: 90px;
+  padding-right: 150px;
+
+  @media (max-width: $sm) {
+    padding-top: 30px;
+    padding-right: 24px;
+  }
+}
+
+.xPaddings {
+  @media (min-width: $sm) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  padding-left: 1.5rem;
+  /* 24px */
+  padding-right: 1.5rem;
+  /* 24px */
+}
+
+.yPaddings {
+  @media (min-width: $sm) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  @media (min-width: $xl) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.topPaddings {
+  @media (min-width : $sm) {
+    padding-top: 4rem;
+  }
+
+  @media (min-width: $xl) {
+    padding-top: 2rem;
+  }
+
+  padding-top: 3rem;
+}
+
+
+.bottomPaddings {
+  @media (min-width : $sm) {
+    padding-bottom: 4rem;
+  }
+
+  @media (min-width: $xl) {
+    padding-bottom: 2rem;
+  }
+
+  padding-bottom: 3rem;
+}
+
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexStart {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.flexEnd {
+  display: flex;
+  justify-items: end;
+}
+
+.primaryText {
+  @media (max-width: $sm) {
+    font-size: 2rem;
+    letter-spacing: 5px;
+  }
+
+  font-family: 'Inika',
+  serif;
+  font-size: 5rem;
+  font-weight: 500;
+  letter-spacing: 14px;
+}
+
+.secondaryText {
+  @media (max-width: $sm) {
+    font-size: 1.1rem;
+    line-height: 40px;
+  }
+
+  font-family: 'Inika',
+  serif;
+  line-height: 50px;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+
+.anchor {
+  display: block;
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+}

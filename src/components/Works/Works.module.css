@@ -1,0 +1,112 @@
+.wrapper {
+  width: 100%;
+  padding: 30px 0;
+  position: relative;
+  overflow-y: auto;
+}
+.wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.modalContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px 0;
+  flex-wrap: wrap;
+}
+.modalContent img {
+  margin-bottom: 20px;
+}
+@media (max-width: 640px) {
+  .modalContent img {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+}
+.modalContent .textBox {
+  text-align: left;
+}
+.modalContent .textBox .title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+@media (max-width: 640px) {
+  .modalContent .textBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .modalContent .textBox .title {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 640px) {
+  .modalContent {
+    flex-direction: column;
+  }
+}
+
+.workExContainer {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+@media (max-width: 640px) {
+  .workExContainer {
+    padding: 0 15px;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+}
+
+.dataBox {
+  position: relative;
+  overflow: hidden;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.dataBox:hover {
+  transform: scale(1.05);
+}
+.dataBox a {
+  text-decoration: none;
+}
+.dataBox img {
+  width: 100%;
+  height: 236px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: opacity 0.3s;
+}
+@media (max-width: 640px) {
+  .dataBox img {
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+.dataBox img:hover {
+  opacity: 0.8;
+}
+.dataBox span .workTitle {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.dataBox span .date {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+}
+@media (max-width: 640px) {
+  .dataBox span .workTitle {
+    font-size: 12px;
+  }
+  .dataBox span .date {
+    font-size: 10px;
+  }
+}/*# sourceMappingURL=Works.module.css.map */

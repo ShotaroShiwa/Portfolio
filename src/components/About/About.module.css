@@ -1,0 +1,179 @@
+/* Keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.wrapper {
+  position: relative;
+  animation: fadeIn 2.5s ease 0s 1 normal;
+}
+@media (max-width: 640px) {
+  .wrapper {
+    flex-wrap: wrap;
+  }
+}
+.wrapper .profTop {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper .profTop img {
+  width: 275px;
+}
+.wrapper .careerImg {
+  width: 300px;
+}
+@media (max-width: 640px) {
+  .wrapper .careerImg {
+    display: none;
+  }
+}
+.wrapper .aboutBox {
+  white-space: pre-wrap;
+}
+@media (max-width: 640px) {
+  .wrapper .aboutBox {
+    margin: 50px 0px 0px;
+    font-size: 12px;
+  }
+}
+.wrapper .profileContainer {
+  margin-top: 20px;
+}
+.wrapper .profileContainer .profileText {
+  display: flex;
+  margin-top: 50px;
+}
+@media (max-width: 640px) {
+  .wrapper .profileContainer .profileText {
+    display: -webkit-box;
+  }
+}
+.wrapper .profileContainer .profileText .profileBox {
+  margin-right: 9%;
+}
+.wrapper .profileContainer .profileText p {
+  margin: 5px 0;
+}
+.wrapper .profileContainer .profileText .profileName_ja {
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 3.2px;
+}
+@media (max-width: 640px) {
+  .wrapper .profileContainer .profileText .profileName_ja {
+    font-size: 21px;
+    font-weight: 400;
+    letter-spacing: 2.1px;
+  }
+}
+.wrapper .profileContainer .profileText .profileName_en {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1.6px;
+}
+@media (max-width: 640px) {
+  .wrapper .profileContainer .profileText .profileName_en {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1.4px;
+  }
+}
+.wrapper .profileContainer .profileText .introduction {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1.6px;
+  margin-top: 36px;
+}
+@media (max-width: 640px) {
+  .wrapper .profileContainer .profileText .introduction {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+  }
+}
+.wrapper .profileContainer .profileText .profileBody {
+  margin-top: 68px;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1.6px;
+}
+@media (max-width: 640px) {
+  .wrapper .profileContainer .profileText .profileBody {
+    font-size: 12px;
+    letter-spacing: 1.2px;
+  }
+}
+@media (max-width: 640px) {
+  .wrapper .profileContainer img {
+    position: absolute;
+    width: 140px;
+    height: auto;
+    right: 10px;
+  }
+}
+.wrapper footer {
+  background: #182D25;
+}
+.wrapper footer h2 {
+  color: #FFF;
+  font-family: Inika;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2px;
+  padding-top: 30px;
+}
+.wrapper footer .textBox {
+  padding: 20px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 640px) {
+  .wrapper footer .textBox {
+    justify-content: center;
+  }
+}
+.wrapper footer .textBox .readText {
+  color: #FFF;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  white-space: pre-wrap;
+}
+.wrapper footer .textBox .contactBox {
+  text-align: center;
+  color: #FFF;
+}
+.wrapper footer .textBox .contactBox .leadText {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.6px;
+}
+@media (max-width: 640px) {
+  .wrapper footer .textBox .contactBox .leadText {
+    font-size: 14px;
+    padding-top: 30px;
+  }
+}
+.wrapper footer .textBox .contactBox .mailAddress {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2px;
+  background: #3F9877;
+  padding: 21px 59px;
+  margin-top: 24px;
+}
+@media (max-width: 640px) {
+  .wrapper footer .textBox .contactBox .mailAddress {
+    font-size: 16px;
+    padding: 15px 30px;
+  }
+}/*# sourceMappingURL=About.module.css.map */

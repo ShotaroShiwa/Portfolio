@@ -1,0 +1,78 @@
+.modalWindow {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modalWindow .modalBack {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.modalWindow .modalContainer {
+  position: relative;
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 800px;
+  height: 80%;
+  max-height: 480px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+}
+.modalWindow .modalContainer img {
+  display: block;
+  width: 40%;
+  margin: 0 auto 20px;
+}
+.modalWindow .modalContainer p,
+.modalWindow .modalContainer div {
+  color: black;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  margin-bottom: 20px;
+}
+.modalWindow .modalContainer button {
+  background-color: #5b5e6e;
+  border: none;
+  padding: 8px 16px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+  display: block;
+  margin: 10px auto 0;
+}
+.modalWindow .modalContainer button:hover {
+  background-color: rgb(60, 63, 83);
+}
+@media (max-width: 640px) {
+  .modalWindow .modalContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
+  }
+  .modalWindow .modalContainer img {
+    width: 70%;
+    margin-bottom: 15px;
+  }
+  .modalWindow .modalContainer p,
+  .modalWindow .modalContainer div {
+    font-size: 0.85rem;
+    width: 100%;
+  }
+  .modalWindow .modalContainer button {
+    font-size: 0.75rem;
+    padding: 7px 14px;
+  }
+}/*# sourceMappingURL=Modal.module.css.map */

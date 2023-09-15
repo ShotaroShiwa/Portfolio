@@ -1,0 +1,96 @@
+.wrapper {
+  position: relative;
+}
+
+.box {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.box .oneContainer {
+  margin: 0 auto;
+}
+@media (max-width: 640px) {
+  .box .oneContainer {
+    margin: 0 auto 50px;
+  }
+}
+.box .oneContainer p {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.box .oneContainer .designContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 140px);
+  gap: 30px;
+}
+@media (max-width: 640px) {
+  .box .oneContainer .designContainer {
+    grid-template-columns: repeat(3, 80px);
+  }
+}
+.box .oneContainer .designContainer .skillIcon {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.box .oneContainer .designContainer .skillIcon:hover {
+  transform: scale(1.05);
+}
+.box .oneContainer .designContainer .skillIcon img {
+  width: 80%;
+  filter: brightness(1.2);
+}
+.box .oneContainer .designContainer div {
+  display: block;
+}
+
+.extendBox {
+  flex-basis: 30%;
+  margin-top: 50px;
+  padding: 20px 50px;
+  width: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: rgba(229, 237, 241, 0.5);
+}
+@media (max-width: 640px) {
+  .extendBox {
+    display: none;
+  }
+}
+.extendBox .graphBox {
+  margin: 20px auto;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 10px;
+}
+.extendBox .graphBox canvas {
+  height: 80px !important;
+}
+@media (max-width: 640px) {
+  .extendBox .graphBox canvas {
+    height: 50px !important;
+  }
+}
+.extendBox .defaultText {
+  font-size: 14px;
+}
+@media (max-width: 640px) {
+  .extendBox .defaultText {
+    font-size: 10px;
+  }
+}
+.extendBox .activeSkill {
+  white-space: pre-wrap;
+}
+@media (max-width: 640px) {
+  .extendBox .activeSkill {
+    font-size: 12px;
+  }
+}
+
+.skillBox {
+  flex-basis: 70%;
+}/*# sourceMappingURL=Skills.module.css.map */

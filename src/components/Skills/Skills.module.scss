@@ -1,0 +1,106 @@
+@import '../../styles/contants.scss';
+
+.wrapper {
+  position: relative;
+}
+
+.box {
+  display: flex;
+  // flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: space-between;
+
+  .oneContainer {
+    margin: 0 auto;
+
+    @media (max-width:$sm) {
+      margin: 0 auto 50px;
+    }
+
+    p {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .designContainer {
+      display: grid;
+      grid-template-columns: repeat(3, 140px);
+      gap: 30px;
+
+      @media(max-width:$sm) {
+        grid-template-columns: repeat(3, 80px);
+      }
+
+      .skillIcon {
+        cursor: pointer;
+        transition: transform 0.3s;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+
+        img {
+          width: 80%;
+          // height: 80%;
+          filter: brightness(1.2);
+        }
+      }
+
+      div {
+        display: block;
+      }
+    }
+  }
+}
+
+.extendBox {
+  flex-basis: 30%;
+  margin-top: 50px;
+  padding: 20px 50px;
+  width: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: rgba(229, 237, 241, 0.5);
+
+  @media(max-width:$sm) {
+    display: none;
+  }
+
+  .graphBox {
+    margin: 20px auto;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+
+    canvas {
+      height: 80px !important;
+
+      @media(max-width:$sm) {
+        height: 50px !important;
+      }
+    }
+  }
+
+  .defaultText {
+    font-size: 14px;
+
+    @media(max-width:$sm) {
+      font-size: 10px;
+    }
+  }
+
+  .activeSkill {
+    white-space: pre-wrap;
+
+    @media(max-width:$sm) {
+      font-size: 12px;
+    }
+  }
+}
+
+.skillBox {
+  flex-basis: 70%;
+  // display: flex;
+}

@@ -1,0 +1,55 @@
+Header {
+  display: none;
+}
+
+.wrapper {
+  height: 100vh;
+  position: relative;
+}
+.wrapper .container {
+  z-index: 1;
+}
+.wrapper .container .menu {
+  position: fixed;
+  list-style: none;
+}
+.wrapper .container .menu li {
+  margin-top: 20px;
+}
+.wrapper .container .menu a {
+  text-decoration: none;
+}
+.wrapper .container .nameBox {
+  position: fixed;
+  bottom: 20%;
+  right: 10%;
+}
+.wrapper .container .nameBox img {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: -100px;
+  left: -150px;
+  z-index: -1;
+}
+@media (max-width: 640px) {
+  .wrapper .container .nameBox img {
+    position: relative;
+  }
+}
+.wrapper .container .nameBox .titleBox p {
+  z-index: 3;
+}
+@media (max-width: 640px) {
+  .wrapper .container .nameBox .titleBox {
+    position: absolute;
+    top: 100px;
+    right: 10px;
+  }
+}
+.wrapper .credit {
+  font-size: 10px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+}/*# sourceMappingURL=Hero.module.css.map */
