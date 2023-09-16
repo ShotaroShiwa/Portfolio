@@ -18,8 +18,10 @@ const SingleWork = () => {
     <>
       <div className={css.logoHeader}>
         <img className={css.topLogo} src={displayWork.logo} alt="" />
-        <button onClick={goBack}>戻る</button>
-
+        {/* <button onClick={goBack}>戻る</button> */}
+        <div className={css.btn}>
+          <a onClick={goBack}>back</a>
+        </div>
       </div>
       <section className={`innerWidth paddings ${css.wrapper}`}>
         <img className={css.mv} src={displayWork.img} alt="" />

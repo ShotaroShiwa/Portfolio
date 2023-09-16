@@ -26,17 +26,8 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   overflow-y: auto;
 }
-.modalWindow .modalContainer img {
-  display: block;
-  width: 40%;
-  margin: 0 auto 20px;
-}
-.modalWindow .modalContainer p,
-.modalWindow .modalContainer div {
-  color: black;
-  font-size: 0.9rem;
-  white-space: pre-wrap;
-  margin-bottom: 20px;
+.modalWindow .modalContainer .activeTitle_sp {
+  display: flex;
 }
 .modalWindow .modalContainer button {
   background-color: #5b5e6e;
@@ -62,14 +53,8 @@
     width: 90%;
     height: 90%;
   }
-  .modalWindow .modalContainer img {
-    width: 70%;
-    margin-bottom: 15px;
-  }
-  .modalWindow .modalContainer p,
-  .modalWindow .modalContainer div {
-    font-size: 0.85rem;
-    width: 100%;
+  .modalWindow .modalContainer .activeTitle_sp {
+    display: flex;
   }
   .modalWindow .modalContainer button {
     font-size: 0.75rem;

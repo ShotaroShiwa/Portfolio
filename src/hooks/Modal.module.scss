@@ -29,18 +29,8 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     overflow-y: auto;
 
-    img {
-      display: block;
-      width: 40%;
-      margin: 0 auto 20px;
-    }
-
-    p,
-    div {
-      color: black;
-      font-size: 0.9rem;
-      white-space: pre-wrap;
-      margin-bottom: 20px;
+    .activeTitle_sp {
+      display: flex;
     }
 
     button {
@@ -68,15 +58,8 @@
       width: 90%;
       height: 90%;
 
-      img {
-        width: 70%;
-        margin-bottom: 15px;
-      }
-
-      p,
-      div {
-        font-size: 0.85rem;
-        width: 100%;
+      .activeTitle_sp {
+        display: flex;
       }
 
       button {

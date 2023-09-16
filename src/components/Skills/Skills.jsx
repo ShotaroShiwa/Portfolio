@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import css from "./Skills.module.scss";
 import { designIcons, developmentIcons } from '../../utils/data';
 import { fadeIn, staggerChildren } from "../../utils/motion";
 import { motion } from "framer-motion";
+import useModal from "./../../hooks/useModal";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -48,7 +49,7 @@ const Skills = () => {
       setSkillValue(value);
       setActiveCategory(category);
     }
-  }
+  };
 
   ChartJS.register(
     CategoryScale,
@@ -61,7 +62,7 @@ const Skills = () => {
 
 
   const options = {
-    maintainAspectRatio: false,
+    maintainAspectRatio: true,
     indexAxis: 'y',
     responsive: true,
     plugins: {
@@ -88,6 +89,41 @@ const Skills = () => {
 
   };
 
+  const [showModal, setShowModal] = useState(false);
+
+  const handleIconClickAndOpenModal = (icon, category) => {
+    handleIconClick(icon.name, icon.img, category, icon.text, icon.value);
+    setShowModal(true);
+  };
+
+
+  useEffect(() => {
+    if (showModal) {
+      openModal(
+        <div className={css.modalContent}>
+          <div className={css.graphBox}>
+            <div className={css.activeTitle_sp}>
+              <div className={activeImg ? css.activeImg : ""}>
+                {activeImg ? <img src={activeImg} /> : ""}
+              </div>
+              <div className={activeSkill ? css.activeSkill : ""}>
+                {activeSkill}
+              </div>
+            </div>
+            <Bar options={options} data={data} />
+            <div className={activeText ? css.activeText : ""}>
+              {activeText}
+            </div>
+          </div>
+        </div>
+      );
+      setShowModal(false);  // モーダル表示後、フラグをリセット
+    }
+  }, [showModal]);
+
+
+
+
 
   const data = {
     labels: [activeText],
@@ -99,6 +135,8 @@ const Skills = () => {
       }
     ],
   };
+
+  const { Modal, openModal, show } = useModal();
 
   return (
     <motion.section
@@ -125,7 +163,7 @@ const Skills = () => {
           </div>
 
         </div>
-        <div className={css.skillBox}>
+        <div className={css.skillBox_pc}>
           <div className={css.oneContainer}>
             <p>Development</p>
             <motion.div
@@ -157,8 +195,42 @@ const Skills = () => {
             </motion.div>
           </div>
         </div>
+        <div className={css.skillBox_sp}>
+          <div className={css.oneContainer}>
+            <p>Development</p>
+            <motion.div
+              variants={fadeIn("down", "tween", 1, 1.5)}
+              className={css.designContainer}
+            >
+              {developmentIcons.map((icon, index) => (
+                <div key={index}
+                  onClick={() => handleIconClickAndOpenModal(icon, 'development')}
+                  className={css.skillIcon}>
+                  <img src={icon.img} alt="" />
+                </div>
+              ))}
+            </motion.div>
+          </div>
+          <div className={css.oneContainer}>
+            <p>Design</p>
+            <motion.div
+              variants={fadeIn("down", "tween", 1, 1.5)}
+              className={css.designContainer}
+            >
+              {designIcons.map((icon, index) => (
+                <div key={index}
+                  onClick={() => handleIconClickAndOpenModal(icon, 'design')}
+                  className={css.skillIcon}>
+                  <img src={icon.img} alt="" />
+                </div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
       </div>
+      <Modal show={show} />
     </motion.section >
+
   )
 }
 

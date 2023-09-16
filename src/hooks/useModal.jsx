@@ -47,6 +47,28 @@ const useModal = () => {
     );
   };
 
+  const [activeSkill, setActiveSkill] = useState("");
+  const [activeImg, setActiveImg] = useState("");
+  const [activeText, setActiveText] = useState("");
+  const [skillValue, setSkillValue] = useState(0);
+  const [activeCategory, setActiveCategory] = useState("");
+
+  const handleIconClick = (name, img, category, text, value) => {
+    if (activeText === text) {
+      setActiveSkill("");
+      setActiveImg("");
+      setActiveText("");
+      setSkillValue(0);
+      setActiveCategory("");
+    } else {
+      setActiveSkill(name);
+      setActiveImg(img);
+      setActiveText(text);
+      setSkillValue(value);
+      setActiveCategory(category);
+    }
+  };
+
 
   return { Modal, openModal, closeModal, show };
 };
