@@ -6,8 +6,8 @@ const About = () => {
   const isDarkMode = useDarkMode();
 
   const imageSrc = isDarkMode
-    ? "/public/経歴デザインダーク.PNG"
-    : "/public/経歴デザイン.PNG";
+    ? "経歴デザインダーク.PNG"
+    : "経歴デザイン.PNG";
   return (
     <section id='about' className={` ${css.wrapper}`}>
       <div className={`innerWidth aboutPaddings ${css.aboutBox}`}>
@@ -20,7 +20,7 @@ const About = () => {
                   <p className={css.profileName_en}>Shotaro Shiwa</p>
                   <p className={css.introduction}>{`1997年生まれ 埼玉県出身\n東洋大学理工学部建築学科卒業`}</p>
                 </div>
-                <img src="/public/20230809icon.JPG" alt="" />
+                <img src="20230809icon.JPG" alt="" />
               </div>
               <div className={css.profileBody}>
                 {profileTexts.map((paragraph, i) => <span key={i}>{paragraph}</span>)}
