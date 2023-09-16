@@ -27,6 +27,19 @@
       }
 
 
+      .activeTitle {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+
+        img {
+          width: 50%;
+        }
+
+        .activeSkill {
+          font-size: 20px;
+        }
+      }
 
       .defaultText {
         font-size: 14px;

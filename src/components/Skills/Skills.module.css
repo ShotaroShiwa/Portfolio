@@ -26,6 +26,17 @@
     display: none;
   }
 }
+.wrapper .box .extendBox .activeTitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.wrapper .box .extendBox .activeTitle img {
+  width: 50%;
+}
+.wrapper .box .extendBox .activeTitle .activeSkill {
+  font-size: 20px;
+}
 .wrapper .box .extendBox .defaultText {
   font-size: 14px;
   margin-top: 40px;
