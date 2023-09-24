@@ -1,31 +1,31 @@
 export const designIcons = [
   {
-    name: 'Photoshop', value: 3, img: 'Photoshop_icon.png', text: 'WEBサイトデザインカンプ制作\n露出補正、色調補正、トリミング、ノイズ除去などのレタッチができます。'
+    name: 'figma', value: 6, lightIcon: '/public/figmaLight.png', darkIcon: '/public/figmaDark.png', text: 'アプリUI設計、WEBサイトデザインをFigmaを活用して行うことができます。\nコンポーネントの作成、オートレイアウトを使い開発フェーズに移行した際に、Figmaファイルを確認しながらスムーズにコーディングが行えるよう意識してデザインします。'
   },
   {
-    name: 'illustrator', value: 2, img: 'Illustrator_icon.png', text: '独学で学習中。\n基礎的な加工は可能'
+    name: 'Photoshop', value: 3, lightIcon: '/public/photoshopLight.png', darkIcon: '/public/photoshopDark.png', text: 'WEBサイトデザインカンプ制作\n露出補正、色調補正、トリミング、ノイズ除去などのレタッチができます。'
   },
   {
-    name: 'figma', value: 6, img: 'figma_icon.png', text: 'アプリUI設計、WEBサイトデザインをFigmaを活用して行うことができます。\nコンポーネントの作成、オートレイアウトを使い開発フェーズに移行した際に、Figmaファイルを確認しながらスムーズにコーディングが行えるよう意識してデザインします。'
+    name: 'illustrator', value: 2, lightIcon: '/public/IllustratorLight.png', darkIcon: '/public/IllustratorDark.png', text: '独学で学習中。\n基礎的な加工は可能'
   },
 ]
 
 export const developmentIcons = [
   {
-    name: 'html', value: 7, img: 'html_icon.png', text: '表示対象に沿った最適なタグ付け、汎用性のある記述、分かりやすい名前付けを心掛けている'
+    name: 'HTML', value: 7, lightIcon: '/public/htmlLight.png', darkIcon: '/public/htmlDark.png', text: '表示対象に沿った最適なタグ付け、汎用性のある記述、分かりやすい名前付けを心掛けている'
   },
   {
-    name: 'css', value: 5, img: 'css_icon.png', text: 'デザインカンプに基づいたCSSコーディング、scssの利用、\nレスポンシブデザイン、animationの使用が可能。'
+    name: 'CSS', value: 5, lightIcon: '/public/cssLight.png', darkIcon: '/public/cssDark.png', text: 'デザインカンプに基づいたCSSコーディング、scssの利用、\nレスポンシブデザイン、animationの使用が可能。'
   },
   {
-    name: 'javascript', value: 2, img: 'js_icon.png', text: 'Vanilla JSとして意図的な開発経験はあまりないが、React jQueryの使用により、JavaScript に触れる機会は多い。'
+    name: 'javascript', value: 2, lightIcon: '/public/jsLight.png', darkIcon: '/public/jsDark.png', text: 'Vanilla JSとして意図的な開発経験はあまりないが、React jQueryの使用により、JavaScript に触れる機会は多い。'
   },
-  { name: 'react', value: 5, img: 'react_icon.png', text: 'コンポーネントファイル管理でのフロントエンド実装、map関数を使用したデータ表示、hooksを用いたダーク・ライトモード切り替え機能、モーダルウィンドウの表示が可能。' },
+  { name: 'React', value: 5, lightIcon: '/public/reactLight.png', darkIcon: '/public/reactDark.png', text: 'コンポーネントファイル管理でのフロントエンド実装、map関数を使用したデータ表示、hooksを用いたダーク・ライトモード切り替え機能、モーダルウィンドウの表示が可能。' },
   {
-    name: 'php', value: 4, img: 'php_icon.png', text: 'CRUD機能、ページ遷移時のデータの受け渡しが可能。'
+    name: 'PHP', value: 4, lightIcon: '/public/phpLight.png', darkIcon: '/public/phpDark.png', text: 'CRUD機能、ページ遷移時のデータの受け渡しが可能。'
   },
   {
-    name: 'laravel', value: 5, img: 'laravel_icon.png', text: 'MySQLと連携したCRUD機能、ログイン機能の実装、bladeファイルでの画面実装が可能。'
+    name: 'Laravel', value: 5, lightIcon: '/public/laravelLight.png', darkIcon: '/public/laravelDark.png', text: 'MySQLと連携したCRUD機能、ログイン機能の実装、bladeファイルでの画面実装が可能。'
   },
 
 
@@ -36,8 +36,8 @@ export const projects = [
     id: 5,
     title: 'Topaz Jade',
     date: '2023.09',
-    img: 'Thum_TopazJade.png',
-    logo: 'topazJade_logo.png',
+    img: '/Thum_TopazJade.png',
+    logo: '/topazJade_logo.png',
     text: '日常の習慣やToDoを効率的に管理するアプリケーション\n\nこのアプリは、個人の習慣を効率的に登録・管理することを目的としており、公開・非公開の設定も可能となっている。公開した習慣は、他のサービス利用者と共有し、MANE（真似）機能を通じてランキング形式での表示される。また、ユーザー同士のコミュニケーションを促進するチャット機能も搭載している。\n開発は5人チームで行い、私が主にFigmaを使用してUI・UXデザインやデータベースの基本設計を担当。\n使用技術としては、Laravel,MySQL, GitHub, Backlogなどを使用。',
     requester: '自主制作',
     part: 'Planning / Design / Coding （レスポンシブ対応）',
@@ -49,8 +49,8 @@ export const projects = [
     id: 4,
     title: 'Habit Manager',
     date: '2023.01',
-    img: 'habitmanager.png',
-    logo: 'HabitManager_logo.png',
+    img: '/habitmanager.png',
+    logo: '/HabitManager_logo.png',
     text: '日常の習慣やToDoを効率的に管理するアプリケーション\n\nこのアプリは、個人の習慣を効率的に登録・管理することを目的としており、公開・非公開の設定も可能となっている。公開した習慣は、他のサービス利用者と共有し、MANE（真似）機能を通じてランキング形式での表示される。また、ユーザー同士のコミュニケーションを促進するチャット機能も搭載している。\n開発は5人チームで行い、私が主にFigmaを使用してUI・UXデザインやデータベースの基本設計を担当。\n使用技術としては、Laravel,MySQL, GitHub, Backlogなどを使用。',
     requester: '自主制作（チーム制作）',
     part: 'Planning / Design / Coding',
@@ -62,8 +62,8 @@ export const projects = [
     id: 3,
     title: 'Dawn SNS',
     date: '2022.08',
-    img: 'dawnSNS.png',
-    logo: 'dawnSNS_logo.png',
+    img: '/dawnSNS.png',
+    logo: '/dawnSNS_logo.png',
     text: '学習用として開発したTwitter風のSNSアプリケーション\n\nLaravelフレームワークを使用し、個人での開発を行った。\nこのアプリケーションには、ログイン機能やメッセージのCRUD機能、プロフィール情報の管理などの基本的なSNSの機能が実装されている。データベースとしてMySQLを活用し、コード管理にはGitHubを使用。',
     requester: '自主制作（学習サイトDAWNによる制作課題）',
     part: 'Coding',
@@ -75,8 +75,8 @@ export const projects = [
     id: 2,
     title: '夜明け食堂',
     date: '2022.08',
-    img: 'dawn-dining.PNG',
-    logo: 'sabamiso_logo.png',
+    img: '/dawn-dining.PNG',
+    logo: '/sabamiso_logo.png',
     text: '飲食店の予約を行うためのシステムとして学習用に作成\n\nPHPを使用して開発を行い、ユーザーはコースの選択から予約までの手続きを簡単に行うことができる。具体的には、コースの選択、人数の指定、氏名やその他のお客様情報の入力、そして最後に内容の確認を行う流れとなっている。',
     requester: '自主制作（学習サイトDAWNによる制作課題）',
     part: 'Coding',
@@ -88,8 +88,8 @@ export const projects = [
     id: 1,
     title: 'Dawn macaron',
     date: '2022.04',
-    img: 'macaron-site.PNG',
-    logo: 'DAWNmacaron_logo.png',
+    img: '/macaron-site.PNG',
+    logo: '/DAWNmacaron_logo.png',
     text: '学習の一環として作成したショップ紹介のLPサイト\n\nこのサイトは、レスポンシブデザインに対応しており、スマートフォンやタブレットからの閲覧も可能。さらに、jqueryを用いて、ハンバーガーメニューやスライダー、モーダルウィンドウ、タブの切り替えなどのインタラクティブな要素を実装している。',
     requester: '自主制作（学習サイトDAWNによる制作課題）',
     part: 'Coding （レスポンシブ対応）',

@@ -31,7 +31,7 @@
   }
 
   .careerImg {
-    width: 300px;
+    // width: 300px;
 
     @media(max-width: $sm) {
       display: none;
@@ -110,10 +110,11 @@
         font-size: 16px;
         font-weight: 400;
         letter-spacing: 1.6px;
+        line-height: 190%;
 
         @media(max-width: $sm) {
-          font-size: 12px;
-          letter-spacing: 1.2px;
+          font-size: 14px;
+          letter-spacing: 1.4px;
           margin: 30px 0px 50px;
         }
       }
@@ -129,35 +130,101 @@
     }
   }
 
-  footer {
-    background: #182D25;
+  // footer {
+  //   background: #182D25;
 
-    h2 {
-      color: #FFF;
-      font-family: Inika;
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      letter-spacing: 2px;
-      padding-top: 30px;
-    }
+  //   h2 {
+  //     color: #FFF;
+  //     font-family: Inika;
+  //     font-size: 20px;
+  //     font-style: normal;
+  //     font-weight: 400;
+  //     line-height: normal;
+  //     letter-spacing: 2px;
+  //     padding-top: 30px;
+  //   }
+
+  //   .textBox {
+  //     padding: 20px 0px;
+  //     display: flex;
+  //     flex-wrap: nowrap;
+  //     justify-content: space-between;
+
+  //     @media(max-width: $sm) {
+  //       flex-wrap: wrap;
+  //       justify-content: center;
+  //     }
+
+  //     .readText {
+  //       color: #FFF;
+  //       font-size: 12px;
+  //       font-weight: 400;
+  //       letter-spacing: 0.5px;
+  //       white-space: pre-wrap;
+  //     }
+
+  //     .contactBox {
+  //       text-align: center;
+  //       color: #FFF;
+
+  //       .leadText {
+  //         font-size: 16px;
+  //         font-weight: 400;
+  //         line-height: normal;
+  //         letter-spacing: 1.6px;
+
+  //         @media(max-width: $sm) {
+  //           font-size: 14px;
+  //           padding-top: 30px;
+  //         }
+  //       }
+
+  //       .mailAddress {
+  //         font-size: 20px;
+  //         font-weight: 400;
+  //         line-height: normal;
+  //         letter-spacing: 2px;
+  //         // background: #3F9877;
+  //         padding: 21px 59px;
+  //         margin-top: 24px;
+
+  //         @media(max-width: $sm) {
+  //           font-size: 16px;
+  //           padding: 15px 30px;
+  //         }
+  //       }
+  //     }
+  //   }
+
+
+  // }
+
+  .footer {
+    color: #FFF;
+    font-family: Inika;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2px;
+    padding-top: 60px;
 
     .textBox {
       padding: 20px 0px;
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       justify-content: space-between;
 
       @media(max-width: $sm) {
+        flex-wrap: wrap;
         justify-content: center;
       }
 
       .readText {
         color: #FFF;
         font-size: 12px;
-        font-weight: 400;
-        letter-spacing: 0.5px;
+        // font-weight: 400;
+        letter-spacing: 3.5px;
         white-space: pre-wrap;
       }
 
@@ -182,7 +249,6 @@
           font-weight: 400;
           line-height: normal;
           letter-spacing: 2px;
-          background: #3F9877;
           padding: 21px 59px;
           margin-top: 24px;
 
@@ -194,6 +260,34 @@
       }
     }
 
+    &.darkTheme {
+      background-color: #b2b027;
+      transition-duration: 1.5s;
 
+      h2 {
+        color: #000;
+      }
+
+      .readText {
+        color: #000;
+      }
+
+      .contactBox {
+        color: #000;
+      }
+
+      .mailAddress {
+        background: #8f8f08;
+      }
+    }
+
+    &.lightTheme {
+      background-color: #182D25;
+      transition-duration: 1.5s; // light modeの背景色を設定
+
+      .mailAddress {
+        background: #3F9877;
+      }
+    }
   }
 }

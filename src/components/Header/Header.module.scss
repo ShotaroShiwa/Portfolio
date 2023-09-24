@@ -11,10 +11,12 @@ header {
 
   .logo {
     display: flex;
+    align-items: center;
+    position: relative;
 
     img {
       width: 50px;
-      position: absolute;
+      // position: absolute;
       left: 136px;
       top: 87px;
       z-index: 1;
@@ -28,6 +30,9 @@ header {
 
     h3 {
       z-index: 2;
+      position: absolute;
+      left: 14px;
+      white-space: nowrap;
 
       .link {
         font-family: 'Inika', serif;

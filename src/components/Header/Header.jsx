@@ -11,8 +11,8 @@ const Header = () => {
   const isDarkMode = useDarkMode();
 
   const imageSrc = isDarkMode
-    ? "TopazJadeロゴdark.PNG"
-    : "TopazJadeロゴ.PNG";
+    ? "/TopazJadeロゴdark.PNG"
+    : "/TopazJadeロゴ.PNG";
 
 
   return (

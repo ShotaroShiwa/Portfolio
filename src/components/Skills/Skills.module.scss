@@ -26,6 +26,14 @@
         display: none;
       }
 
+      .nullBox {
+        height: 67px;
+      }
+
+      .canvas {
+        height: 50px;
+      }
+
 
       .activeTitle {
         display: flex;
@@ -42,11 +50,10 @@
       }
 
       .defaultText {
-        font-size: 14px;
         margin-top: 40px;
 
         @media(max-width:$sm) {
-          font-size: 10px;
+          font-size: 12px;
         }
       }
 

@@ -18,36 +18,36 @@ import { Bar } from 'react-chartjs-2';
 
 const Skills = () => {
 
-  const getBarColor = (category) => {
-    switch (category) {
-      case 'design':
-        return 'rgba(0, 123, 255, 0.5)';
-      case 'development':
-        return 'rgba(255, 0, 0, 0.5)';
-      default:
-        return 'rgba(0, 102, 102, 0.6)';
-    }
-  }
+  // const getBarColor = (category) => {
+  //   switch (category) {
+  //     case 'design':
+  //       return 'rgba(0, 123, 255, 0.5)';
+  //     case 'development':
+  //       return 'rgba(255, 0, 0, 0.5)';
+  //     default:
+  //       return 'rgba(0, 102, 102, 0.6)';
+  //   }
+  // }
 
   const [activeSkill, setActiveSkill] = useState("");
   const [activeImg, setActiveImg] = useState("");
   const [activeText, setActiveText] = useState("");
   const [skillValue, setSkillValue] = useState(0);
-  const [activeCategory, setActiveCategory] = useState("");
+  // const [activeCategory, setActiveCategory] = useState("");
 
-  const handleIconClick = (name, img, category, text, value) => {
+  const handleIconClick = (name, lightIcon, category, text, value) => {
     if (activeText === text) {
       setActiveSkill("");
       setActiveImg("");
       setActiveText("");
       setSkillValue(0);
-      setActiveCategory("");
+      // setActiveCategory("");
     } else {
       setActiveSkill(name);
-      setActiveImg(img);
+      setActiveImg(lightIcon);
       setActiveText(text);
       setSkillValue(value);
-      setActiveCategory(category);
+      // setActiveCategory(category);
     }
   };
 
@@ -75,7 +75,7 @@ const Skills = () => {
         max: 10,
         ticks: {
           color: '#1a1a1a',
-          stepSize: 2
+          stepSize: 5
         },
         grid: {
           borderColor: '#1a1a1a',
@@ -92,7 +92,7 @@ const Skills = () => {
   const [showModal, setShowModal] = useState(false);
 
   const handleIconClickAndOpenModal = (icon, category) => {
-    handleIconClick(icon.name, icon.img, category, icon.text, icon.value);
+    handleIconClick(icon.name, icon.lightIcon, category, icon.text, icon.value);
     setShowModal(true);
   };
 
@@ -117,7 +117,7 @@ const Skills = () => {
           </div>
         </div>
       );
-      setShowModal(false);  // モーダル表示後、フラグをリセット
+      setShowModal(false);
     }
   }, [showModal]);
 
@@ -130,7 +130,7 @@ const Skills = () => {
     datasets: [
       {
         data: [skillValue],
-        backgroundColor: getBarColor(activeCategory),
+        // backgroundColor: #000,
         categoryPercentage: 0.3
       }
     ],
@@ -153,10 +153,12 @@ const Skills = () => {
                 {activeImg ? <img src={activeImg} /> : ""}
               </div>
               <div className={activeSkill ? css.activeSkill : ""}>
-                {activeSkill}
+                {activeSkill || <div className={css.nullBox}></div>}
               </div>
             </div>
-            <Bar options={options} data={data} />
+            <div className={css.canvas}>
+              <Bar options={options} data={data} />
+            </div>
             <div className={activeText ? css.activeText : ""}>
               {activeText || <div className={css.defaultText}> スキルアイコンをクリックすると説明が表示されます</div>}
             </div>
@@ -172,9 +174,9 @@ const Skills = () => {
             >
               {developmentIcons.map((icon, index) => (
                 <div key={index}
-                  onClick={() => handleIconClick(icon.name, icon.img, 'development', icon.text, icon.value)}
+                  onClick={() => handleIconClick(icon.name, icon.lightIcon, 'development', icon.text, icon.value)}
                   className={css.skillIcon}>
-                  <img src={icon.img} alt="" />
+                  <img src={icon.lightIcon} alt="" />
                 </div>
               ))}
             </motion.div>
@@ -187,9 +189,9 @@ const Skills = () => {
             >
               {designIcons.map((icon, index) => (
                 <div key={index}
-                  onClick={() => handleIconClick(icon.name, icon.img, 'design', icon.text, icon.value)}
+                  onClick={() => handleIconClick(icon.name, icon.lightIcon, 'design', icon.text, icon.value)}
                   className={css.skillIcon}>
-                  <img src={icon.img} alt="" />
+                  <img src={icon.lightIcon} alt="" />
                 </div>
               ))}
             </motion.div>
@@ -206,7 +208,7 @@ const Skills = () => {
                 <div key={index}
                   onClick={() => handleIconClickAndOpenModal(icon, 'development')}
                   className={css.skillIcon}>
-                  <img src={icon.img} alt="" />
+                  <img src={icon.lightIcon} alt="" />
                 </div>
               ))}
             </motion.div>
@@ -221,7 +223,7 @@ const Skills = () => {
                 <div key={index}
                   onClick={() => handleIconClickAndOpenModal(icon, 'design')}
                   className={css.skillIcon}>
-                  <img src={icon.img} alt="" />
+                  <img src={icon.lightIcon} alt="" />
                 </div>
               ))}
             </motion.div>

@@ -6,8 +6,13 @@ const About = () => {
   const isDarkMode = useDarkMode();
 
   const imageSrc = isDarkMode
-    ? "経歴デザインダーク.PNG"
-    : "経歴デザイン.PNG";
+    ? "/public/careerDark.png"
+    : "/public/careerLight.png";
+
+  const footerClassName = isDarkMode
+    ? `${css.footer} ${css.darkTheme}`
+    : `${css.footer} ${css.lightTheme}`;
+
   return (
     <section id='about' className={` ${css.wrapper}`}>
       <div className={`innerWidth aboutPaddings ${css.aboutBox}`}>
@@ -20,7 +25,7 @@ const About = () => {
                   <p className={css.profileName_en}>Shotaro Shiwa</p>
                   <p className={css.introduction}>{`1997年生まれ 埼玉県出身\n東洋大学理工学部建築学科卒業`}</p>
                 </div>
-                <img src="20230809icon.JPG" alt="" />
+                <img src="/20230809icon.JPG" alt="" />
               </div>
               <div className={css.profileBody}>
                 {profileTexts.map((paragraph, i) => <span key={i}>{paragraph}</span>)}
@@ -32,7 +37,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <footer className={css.footer}>
+      <footer className={footerClassName}>
         <div className="innerWidth footerPaddings">
           <h2>Topaz Jade</h2>
           <div className={css.textBox}>
