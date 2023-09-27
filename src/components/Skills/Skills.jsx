@@ -14,40 +14,28 @@ import {
   Legend,
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
+import modalStyles from "../../hooks/Modal.module.scss";
+import useDarkMode from "../../hooks/useDarkMode";
 
 
 const Skills = () => {
-
-  // const getBarColor = (category) => {
-  //   switch (category) {
-  //     case 'design':
-  //       return 'rgba(0, 123, 255, 0.5)';
-  //     case 'development':
-  //       return 'rgba(255, 0, 0, 0.5)';
-  //     default:
-  //       return 'rgba(0, 102, 102, 0.6)';
-  //   }
-  // }
 
   const [activeSkill, setActiveSkill] = useState("");
   const [activeImg, setActiveImg] = useState("");
   const [activeText, setActiveText] = useState("");
   const [skillValue, setSkillValue] = useState(0);
-  // const [activeCategory, setActiveCategory] = useState("");
 
-  const handleIconClick = (name, lightIcon, category, text, value) => {
+  const handleIconClick = (name, lightIcon, text, value) => {
     if (activeText === text) {
       setActiveSkill("");
       setActiveImg("");
       setActiveText("");
       setSkillValue(0);
-      // setActiveCategory("");
     } else {
       setActiveSkill(name);
       setActiveImg(lightIcon);
       setActiveText(text);
       setSkillValue(value);
-      // setActiveCategory(category);
     }
   };
 
@@ -62,7 +50,7 @@ const Skills = () => {
 
 
   const options = {
-    maintainAspectRatio: true,
+    maintainAspectRatio: false,
     indexAxis: 'y',
     responsive: true,
     plugins: {
@@ -91,8 +79,8 @@ const Skills = () => {
 
   const [showModal, setShowModal] = useState(false);
 
-  const handleIconClickAndOpenModal = (icon, category) => {
-    handleIconClick(icon.name, icon.lightIcon, category, icon.text, icon.value);
+  const handleIconClickAndOpenModal = (icon) => {
+    handleIconClick(icon.name, icon.lightIcon, icon.text, icon.value);
     setShowModal(true);
   };
 
@@ -100,18 +88,20 @@ const Skills = () => {
   useEffect(() => {
     if (showModal) {
       openModal(
-        <div className={css.modalContent}>
-          <div className={css.graphBox}>
-            <div className={css.activeTitle_sp}>
-              <div className={activeImg ? css.activeImg : ""}>
+        <div className={modalStyles.modalContent}>
+          <div className={modalStyles.graphBox}>
+            <div className={modalStyles.activeTitle_sp}>
+              <div className={activeImg ? modalStyles.activeImg : ""}>
                 {activeImg ? <img src={activeImg} /> : ""}
               </div>
-              <div className={activeSkill ? css.activeSkill : ""}>
+              <div className={activeSkill ? modalStyles.activeSkill : ""}>
                 {activeSkill}
               </div>
             </div>
-            <Bar options={options} data={data} />
-            <div className={activeText ? css.activeText : ""}>
+            <div className={modalStyles.modalCanvas}>
+              <Bar options={options} data={data} />
+            </div>
+            <div className={activeText ? modalStyles.activeText : ""}>
               {activeText}
             </div>
           </div>
@@ -130,13 +120,14 @@ const Skills = () => {
     datasets: [
       {
         data: [skillValue],
-        // backgroundColor: #000,
         categoryPercentage: 0.3
       }
     ],
   };
 
   const { Modal, openModal, show } = useModal();
+
+  const isDarkMode = useDarkMode();
 
   return (
     <motion.section
@@ -156,9 +147,11 @@ const Skills = () => {
                 {activeSkill || <div className={css.nullBox}></div>}
               </div>
             </div>
-            <div className={css.canvas}>
-              <Bar options={options} data={data} />
-            </div>
+            {activeSkill && (
+              <div className={css.canvas}>
+                <Bar options={options} data={data} />
+              </div>
+            )}
             <div className={activeText ? css.activeText : ""}>
               {activeText || <div className={css.defaultText}> スキルアイコンをクリックすると説明が表示されます</div>}
             </div>
@@ -174,9 +167,9 @@ const Skills = () => {
             >
               {developmentIcons.map((icon, index) => (
                 <div key={index}
-                  onClick={() => handleIconClick(icon.name, icon.lightIcon, 'development', icon.text, icon.value)}
+                  onClick={() => handleIconClick(icon.name, isDarkMode ? icon.darkIcon : icon.lightIcon, icon.text, icon.value)}
                   className={css.skillIcon}>
-                  <img src={icon.lightIcon} alt="" />
+                  <img src={isDarkMode ? icon.darkIcon : icon.lightIcon} alt="" />
                 </div>
               ))}
             </motion.div>
@@ -189,9 +182,9 @@ const Skills = () => {
             >
               {designIcons.map((icon, index) => (
                 <div key={index}
-                  onClick={() => handleIconClick(icon.name, icon.lightIcon, 'design', icon.text, icon.value)}
+                  onClick={() => handleIconClick(icon.name, isDarkMode ? icon.darkIcon : icon.lightIcon, icon.text, icon.value)}
                   className={css.skillIcon}>
-                  <img src={icon.lightIcon} alt="" />
+                  <img src={isDarkMode ? icon.darkIcon : icon.lightIcon} alt="" />
                 </div>
               ))}
             </motion.div>
@@ -208,7 +201,7 @@ const Skills = () => {
                 <div key={index}
                   onClick={() => handleIconClickAndOpenModal(icon, 'development')}
                   className={css.skillIcon}>
-                  <img src={icon.lightIcon} alt="" />
+                  <img src={isDarkMode ? icon.darkIcon : icon.lightIcon} alt="" />
                 </div>
               ))}
             </motion.div>
@@ -223,7 +216,7 @@ const Skills = () => {
                 <div key={index}
                   onClick={() => handleIconClickAndOpenModal(icon, 'design')}
                   className={css.skillIcon}>
-                  <img src={icon.lightIcon} alt="" />
+                  <img src={isDarkMode ? icon.darkIcon : icon.lightIcon} alt="" />
                 </div>
               ))}
             </motion.div>

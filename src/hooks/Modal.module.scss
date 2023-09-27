@@ -31,41 +31,43 @@
 
     .activeTitle_sp {
       display: flex;
-    }
-
-    button {
-      background-color: #5b5e6e;
-      border: none;
-      padding: 8px 16px;
-      color: #fff;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 0.8rem;
-      font-weight: 600;
-      transition: background-color 0.2s;
-      display: block;
-      margin: 10px auto 0;
-
-      &:hover {
-        background-color: rgb(60, 63, 83);
-      }
-    }
-
-    @media (max-width: $sm) {
-      display: flex;
       align-items: center;
-      flex-direction: column;
-      width: 90%;
-      height: 90%;
 
-      .activeTitle_sp {
-        display: flex;
+      img {
+        width: 40%;
+        margin: 20px 10px;
       }
 
-      button {
-        font-size: 0.75rem;
-        padding: 7px 14px;
+      .activeSkill {
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-left: -45px;
       }
+    }
+
+    .modalCanvas {
+      height: 50px;
+    }
+
+    .activeText {
+      margin-top: 40px;
     }
   }
+
+
+
+  button {
+    position: absolute;
+    right: 10%;
+    top: 3%;
+    background-color: #fff;
+    border: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: block;
+    margin: 10px auto 0;
+  }
+
+
+
 }

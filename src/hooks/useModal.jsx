@@ -37,10 +37,10 @@ const useModal = () => {
 
     return createPortal(
       <div className={css.modalWindow}>
-        <div className={css.modalBack}></div>
+        <div className={css.modalBack} onClick={closeModal}></div>
         <div className={css.modalContainer} ref={contentRef}>
           {content}
-          <button className="primaryText bottomPaddings" onClick={closeModal}>✕ Close</button>
+          <button className="" onClick={closeModal}>✕</button>
         </div>
       </div>,
       document.getElementById('root')

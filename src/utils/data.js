@@ -1,6 +1,6 @@
 export const designIcons = [
   {
-    name: 'figma', value: 6, lightIcon: '/public/figmaLight.png', darkIcon: '/public/figmaDark.png', text: 'アプリUI設計、WEBサイトデザインをFigmaを活用して行うことができます。\nコンポーネントの作成、オートレイアウトを使い開発フェーズに移行した際に、Figmaファイルを確認しながらスムーズにコーディングが行えるよう意識してデザインします。'
+    name: 'Figma', value: 6, lightIcon: '/public/figmaLight.png', darkIcon: '/public/figmaDark.png', text: 'アプリUI設計、WEBサイトデザインをFigmaを活用して行うことができます。\nコンポーネントの作成、オートレイアウトを使い開発フェーズに移行した際に、Figmaファイルを確認しながらスムーズにコーディングが行えるよう意識してデザインします。'
   },
   {
     name: 'Photoshop', value: 3, lightIcon: '/public/photoshopLight.png', darkIcon: '/public/photoshopDark.png', text: 'WEBサイトデザインカンプ制作\n露出補正、色調補正、トリミング、ノイズ除去などのレタッチができます。'

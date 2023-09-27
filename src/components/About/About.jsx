@@ -21,7 +21,7 @@ const About = () => {
             <div className={css.profileBox}>
               <div className={css.profTop}>
                 <div>
-                  <p className={css.profileName_ja}>志和照太郎</p>
+                  <p className={css.profileName_ja}>志和 照太郎</p>
                   <p className={css.profileName_en}>Shotaro Shiwa</p>
                   <p className={css.introduction}>{`1997年生まれ 埼玉県出身\n東洋大学理工学部建築学科卒業`}</p>
                 </div>

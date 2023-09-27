@@ -5,7 +5,7 @@ const StyledToggleSwitchButton = styled.div`
 & input {
 		display: none;
 		&:checked + label {
-			background-color: #003366;
+			background-color: #393c63;
 			&::before {
 				left: 2em;
 			}
@@ -13,9 +13,9 @@ const StyledToggleSwitchButton = styled.div`
 	}
 
 	& label {
-		background-color: #ff9933;
+		background-color: #d1d7b1;
 		border-radius: 2em;
-		border: 2px solid var(--text-color);
+		border: 1px solid var(--text-color);
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
@@ -23,6 +23,7 @@ const StyledToggleSwitchButton = styled.div`
 		position: relative;
 		transition: .5s;
 		width: 3.75em;
+		top:7px;
 
 		&::before {
 			background: #fff;
@@ -36,6 +37,12 @@ const StyledToggleSwitchButton = styled.div`
 			width: 1.5em;
 			z-index: 2;
 		}
+	}
+
+	@media (max-width:640px){
+		transform:scale(0.7);
+		margin-top: 9px;
+    margin-right: 40px;
 	}
 `
 const ToggleSwitchButton = React.forwardRef((props, ref) => {

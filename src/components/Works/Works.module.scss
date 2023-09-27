@@ -58,7 +58,6 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
   @media (max-width: $sm) {
-    padding: 0 15px;
     gap: 20px;
     grid-template-columns: 1fr;
     height: auto;

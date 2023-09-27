@@ -6,21 +6,33 @@
 
 .logoHeader {
   background: #fff;
+  margin-top: 45px;
+  position: relative;
+
+
 
   img {
     display: block;
+    height: 100px;
     margin: 0 auto;
+    padding: 20px;
     box-sizing: border-box;
 
     @media(max-width:$sm) {
-      width: 50%;
+      height: 70px;
     }
   }
 
   .btn {
-    position: fixed;
+    position: absolute;
+    right: 170px;
     top: 50px;
-    right: 10px;
+
+    @media(max-width:$sm) {
+      transform: scale(0.7);
+      right: 10px;
+      top: 40px;
+    }
 
     a {
       position: relative;
@@ -68,7 +80,7 @@
 
 .mv {
   width: 100%;
-  margin: 50px 0px 70px;
+  margin-bottom: 70px;
 }
 
 .introBox {

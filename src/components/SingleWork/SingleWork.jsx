@@ -2,6 +2,7 @@ import React from 'react'
 import css from "./SingleWork.module.scss";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { projects } from "../../utils/data";
+import ScrollTop from '../../utils/scrollTop';
 
 
 const SingleWork = () => {
@@ -16,9 +17,9 @@ const SingleWork = () => {
 
   return (
     <>
+      <ScrollTop />
       <div className={css.logoHeader}>
         <img className={css.topLogo} src={displayWork.logo} alt="" />
-        {/* <button onClick={goBack}>戻る</button> */}
         <div className={css.btn}>
           <a onClick={goBack}>back</a>
         </div>
