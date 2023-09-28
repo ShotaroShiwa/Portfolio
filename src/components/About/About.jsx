@@ -31,9 +31,7 @@ const About = () => {
                 {profileTexts.map((paragraph, i) => <span key={i}>{paragraph}</span>)}
               </div>
             </div>
-            <div>
-              <img className={css.careerImg} src={imageSrc} alt="careerImg" />
-            </div>
+            <img className={css.careerImg} src={imageSrc} alt="careerImg" />
           </div>
         </div>
       </div>

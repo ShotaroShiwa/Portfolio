@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
+import { useLocation } from "react-router-dom";
+
 
 const StyledToggleSwitchButton = styled.div`
 & input {
@@ -39,17 +41,21 @@ const StyledToggleSwitchButton = styled.div`
 		}
 	}
 
-	@media (max-width:640px){
-		transform:scale(0.7);
-		margin-top: 9px;
-    margin-right: 40px;
-	}
+	@media (max-width:640px) {
+    transform:scale(0.7);
+    ${({ isHero }) => !isHero && `
+      margin-top: 9px;
+      margin-right: 40px;
+    `}
+  }
 `
 const ToggleSwitchButton = React.forwardRef((props, ref) => {
 	const { className, handleChange } = props;
+	const location = useLocation();
+	const isHero = location.pathname === '/Portfolio/';
 
 	return (
-		<StyledToggleSwitchButton className={className}>
+		<StyledToggleSwitchButton className={className} isHero={isHero}>
 			<input id='btn-mode' type="checkbox" onChange={handleChange} ref={ref} />
 			<label htmlFor="btn-mode"></label>
 		</StyledToggleSwitchButton>

@@ -7,7 +7,6 @@ import useDarkMode from '../../hooks/useDarkMode';
 const Header = () => {
   const location = useLocation();
   const isHero = location.pathname === '/Portfolio/';
-  const isSingleWork = location.pathname === '/Portfolio/works/';
 
   const isDarkMode = useDarkMode();
 
@@ -24,14 +23,14 @@ const Header = () => {
   return (
     <header className={`innerWidth HeaderPaddings
        ${css.header}
-       ${isHero ? css.heroHeader : ''} `}
+       ${isHero ? css.heroHeader : ''}`}
     >
       <div className={css.logo}>
         <img src={imageSrc} alt="Topaz Jade Logo" />
         <h3><NavLink className={` ${css.link}`} activeClassName={css.active} to="/Portfolio/" exact>Topaz Jade</NavLink></h3>
       </div>
 
-      <nav className={`${css.navPc} ${isHero ? css.heroHeader : ''}`}>
+      <nav className={`${isHero ? css.heroNav : css.navPc}`}>
         <ul >
           <li>
             <NavLink to="/Portfolio/works" activeClassName={css.active}>Works</NavLink>

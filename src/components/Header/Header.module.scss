@@ -223,13 +223,19 @@ header {
   }
 
   .heroNav {
+    @media (min-width:$sm) {
+      position: absolute;
+      bottom: 124px;
+    }
+
     ul {
       display: inline-block;
       position: absolute;
-      bottom: 0px;
+      top: -8px;
 
       li {
-        margin-bottom: 30px;
+        list-style: none;
+        margin-bottom: 25px;
         margin-left: 0px;
 
         @media(max-width:$sm) {
