@@ -23,6 +23,7 @@ body.dark-theme {
   --text-color: #ddd;
   --header-bg-color: #222;
   --openBtn-bg-color: #ddd;
+  --underline-color: #ddd;
   transition-duration: 1.5s;
 
   a {
@@ -37,6 +38,7 @@ body.dark-theme {
     --text-color: #fff;
     --header-bg-color: #222;
     --openBtn-bg-color: #203533;
+    --underline-color: #203533;
     transition-duration: 1.5s;
   }
 }
@@ -73,7 +75,7 @@ body::-webkit-scrollbar {
 }
 
 .paddings {
-  padding: 90px 150px;
+  padding: 90px 100px;
 
   @media (max-width: $sm) {
     padding: 30px 24px;
@@ -81,7 +83,7 @@ body::-webkit-scrollbar {
 }
 
 .HeaderPaddings {
-  padding: 90px 150px 0px;
+  padding: 60px 100px 0px;
 
   @media (max-width: $sm) {
     padding: 30px 24px 0px;
@@ -89,7 +91,7 @@ body::-webkit-scrollbar {
 }
 
 .aboutPaddings {
-  padding: 0px 150px 26px;
+  padding: 90px 100px 50px;
 
   @media (max-width: $sm) {
     padding: 0px 24px 10px;
@@ -97,7 +99,7 @@ body::-webkit-scrollbar {
 }
 
 .footerPaddings {
-  padding: 0px 150px 30px;
+  padding: 0px 100px 30px;
 
   @media (max-width: $sm) {
     padding: 0px 24px 20px;
@@ -105,8 +107,8 @@ body::-webkit-scrollbar {
 }
 
 .darkModeBtnPaddings {
-  padding-top: 90px;
-  padding-right: 150px;
+  padding-top: 60px;
+  padding-right: 100px;
 
   @media (max-width: $sm) {
     padding-top: 30px;
@@ -114,75 +116,6 @@ body::-webkit-scrollbar {
   }
 }
 
-.xPaddings {
-  @media (min-width: $sm) {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-
-  padding-left: 1.5rem;
-  /* 24px */
-  padding-right: 1.5rem;
-  /* 24px */
-}
-
-.yPaddings {
-  @media (min-width: $sm) {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-
-  @media (min-width: $xl) {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-.topPaddings {
-  @media (min-width : $sm) {
-    padding-top: 4rem;
-  }
-
-  @media (min-width: $xl) {
-    padding-top: 2rem;
-  }
-
-  padding-top: 3rem;
-}
-
-
-.bottomPaddings {
-  @media (min-width : $sm) {
-    padding-bottom: 4rem;
-  }
-
-  @media (min-width: $xl) {
-    padding-bottom: 2rem;
-  }
-
-  padding-bottom: 3rem;
-}
-
-
-.flexCenter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.flexStart {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-}
-
-.flexEnd {
-  display: flex;
-  justify-items: end;
-}
 
 .primaryText {
   @media (max-width: $sm) {
@@ -209,12 +142,4 @@ body::-webkit-scrollbar {
   font-size: 2rem;
   font-weight: 500;
   margin-top: -10px;
-}
-
-
-.anchor {
-  display: block;
-  position: relative;
-  top: -100px;
-  visibility: hidden;
 }

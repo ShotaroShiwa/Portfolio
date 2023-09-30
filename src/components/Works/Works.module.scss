@@ -110,12 +110,16 @@
     }
 
     @media (max-width:$sm) {
+
+
       .workTitle {
         font-size: 16px;
+        margin-top: 3px;
       }
 
       .date {
         font-size: 10px;
+        margin-top: 2px;
       }
     }
   }

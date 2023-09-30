@@ -14,10 +14,10 @@
     }
 
     .extendBox {
-      flex-basis: 30%;
       margin-right: 100px;
       padding: 20px 50px;
       width: 50%;
+      height: 500px;
       border: 1px solid rgba(0, 0, 0, 0.1);
       border-radius: 10px;
       background-color: rgba(229, 237, 241, 0.5);
@@ -32,10 +32,12 @@
 
       .canvas {
         height: 50px;
+        width: 250px;
       }
 
 
       .activeTitle {
+        transition-duration: 1.5s;
         display: flex;
         align-items: center;
         margin-bottom: 30px;
@@ -52,7 +54,7 @@
       }
 
       .defaultText {
-        margin-top: 40px;
+        white-space: pre-wrap;
 
         @media(max-width:$sm) {
           font-size: 12px;
@@ -62,6 +64,7 @@
       .activeText {
         white-space: pre-wrap;
         margin-top: 40px;
+        letter-spacing: 0.8px;
 
         @media(max-width:$sm) {
           font-size: 12px;

@@ -153,7 +153,7 @@ const Skills = () => {
               </div>
             )}
             <div className={activeText ? css.activeText : ""}>
-              {activeText || <div className={css.defaultText}> スキルアイコンをクリックすると説明が表示されます</div>}
+              {activeText || <div className={css.defaultText}> {`スキルアイコンをクリックすると\n説明が表示されます`}</div>}
             </div>
           </div>
 

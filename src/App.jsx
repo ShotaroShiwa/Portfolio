@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ToggleSwitchButton from './components/ToggleSwitchButton/ToggleSwitchButton';
 import useDarkModeButton from "./utils/useDarkModeButton";
 import SingleWork from "./components/SingleWork/SingleWork";
+import Loading from "./components/Loading/Loading";
 
 
 
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <>
+      <Loading />
       <div className={`${css.container}`}>
         <Router>
           <ToggleSwitchButton

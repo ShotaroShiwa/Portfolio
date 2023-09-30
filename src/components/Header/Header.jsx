@@ -11,8 +11,8 @@ const Header = () => {
   const isDarkMode = useDarkMode();
 
   const imageSrc = isDarkMode
-    ? "/TopazJadeロゴdark.PNG"
-    : "/TopazJadeロゴ.PNG";
+    ? "/images/TopazJadeロゴdark.PNG"
+    : "/images/TopazJadeロゴ.PNG";
 
   const [isActive, setIsActive] = useState(false);
   const openMenu = () => {
@@ -62,8 +62,6 @@ const Header = () => {
         >
           <span></span><span></span><span></span>
         </div>
-        {/* <div className={css.buttonArea}></div> */}
-
       </nav>
 
     </header>

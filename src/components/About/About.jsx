@@ -6,8 +6,8 @@ const About = () => {
   const isDarkMode = useDarkMode();
 
   const imageSrc = isDarkMode
-    ? "/public/careerDark.png"
-    : "/public/careerLight.png";
+    ? "/images/careerDark.png"
+    : "/images/careerLight.png";
 
   const footerClassName = isDarkMode
     ? `${css.footer} ${css.darkTheme}`
@@ -25,7 +25,7 @@ const About = () => {
                   <p className={css.profileName_en}>Shotaro Shiwa</p>
                   <p className={css.introduction}>{`1997年生まれ 埼玉県出身\n東洋大学理工学部建築学科卒業`}</p>
                 </div>
-                <img src="/20230809icon.JPG" alt="" />
+                <img src="/images/20230809icon.JPG" alt="" />
               </div>
               <div className={css.profileBody}>
                 {profileTexts.map((paragraph, i) => <span key={i}>{paragraph}</span>)}
@@ -37,16 +37,17 @@ const About = () => {
       </div>
       <footer className={footerClassName}>
         <div className="innerWidth footerPaddings">
-          <h2>Topaz Jade</h2>
           <div className={css.textBox}>
-            <div className={css.readText} >
-              {readText.map((paragraph, i) => <span key={i}>{paragraph}</span>)}
+            <div className={css.boxLeft}>
+              <h2>Topaz Jade</h2>
+              <div className={css.readText} >
+                {readText.map((paragraph, i) => <span key={i}>{paragraph}</span>)}
+              </div>
             </div>
             <div className={css.contactBox}>
               <p className={css.leadText}>お仕事のご相談はこちらから</p>
               <p className={css.mailAddress}>topazjade1997@gmail.com</p>
             </div>
-
           </div>
         </div>
 

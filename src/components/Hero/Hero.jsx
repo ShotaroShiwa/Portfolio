@@ -5,8 +5,8 @@ const Hero = () => {
   const isDarkMode = useDarkMode();
 
   const imageSrc = isDarkMode
-    ? "/TopazJadeロゴdark.PNG"
-    : "/TopazJadeロゴ.PNG";
+    ? "/images/TopazJadeロゴdark.PNG"
+    : "/images/TopazJadeロゴ.PNG";
 
   return (
     <>
