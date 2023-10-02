@@ -39,6 +39,7 @@ export const projects = [
     img: '/images/Thum_TopazJade.png',
     logo: '/images/topazJade_logo.png',
     requester: '自主制作',
+    code: 'https://github.com/ShotaroShiwa/Portfolio',
     part: 'Planning / Design / Coding （レスポンシブ対応）',
     usedSkill: '使用ツール：Figma / React  / Photoshop   / GitHub ',
     overview: 'ポートフォリオ',

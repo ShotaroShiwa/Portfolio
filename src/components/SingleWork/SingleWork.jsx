@@ -14,6 +14,21 @@ const SingleWork = () => {
     navigate(-1);
   };
 
+  const RequesterDisplay = ({ text }) => {
+    const dawnPattern = /学習サイトDAWN/;
+    if (dawnPattern.test(text)) {
+      return (
+        <span>
+          {text.split(dawnPattern)[0]}
+          <a href="https://dawn-techschool.com/">学習サイトDAWN</a>
+          {text.split(dawnPattern)[1]}
+        </span>
+      );
+    }
+    return <span>{text}</span>;
+  };
+
+
 
   return (
     <>
@@ -31,7 +46,14 @@ const SingleWork = () => {
             <div className={css.title}>{displayWork.title}</div>
             <div className={css.date}>{displayWork.date}</div>
           </div>
-          <div className={css.requester}>{displayWork.requester}</div>
+          <div className={css.requester}>
+            <RequesterDisplay text={displayWork.requester} />
+            {displayWork.code && (
+              <div className={css.gitUrl}>
+                Code: <a href={displayWork.code} target="_blank" rel="noopener noreferrer">{displayWork.code}</a>
+              </div>
+            )}
+          </div>
           <div className={css.part}>{displayWork.part}</div>
           <div className={css.usedSkill}>{displayWork.usedSkill}</div>
         </div>
